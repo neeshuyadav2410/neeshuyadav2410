@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main() {
+    int n, x;  // Declare variables n and x
+    printf("Enter the number of elements in the array: ");
+    scanf("%d", &n);
+
+    int arr[n];  // Declare the array with a specific size (n)
+    printf("Enter the elements of the array:\n");
+    
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    printf("Enter the element you want to find: ");
+    scanf("%d", &x);
+
+    // Search for the element x in the array
+    for (int i = 0; i < n; i++) {
+        if (arr[i] == x) {
+            printf("Element %d found at position %d.\n", x, i+1);
+            return 0;  // Exit the program
+        }
+    }
+
+    // If the element is not found, inform the user
+    printf("Element %d not found in the array.\n");
+
+    return 0;
+}
